@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .father{
+            width: 1000px;
+            height: 550px;
+            border: 1px solid darkblue;
+            margin:0 auto;
+            position: relative;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+</div>
+
+<script>
+    var sons = document.getElementsByClassName("son");
+    for(var i = 0;i < sons.length;i++){
+        var Left = Math.round(Math.random()*800);
+        var Top = Math.round(Math.random()*350);
+        var r = Math.round(Math.random()*255);
+        var g = Math.round(Math.random()*255);
+        var b = Math.round(Math.random()*255);
+        sons[i].style.left = Left + "px";
+        sons[i].style.top = Top + "px";
+        sons[i].style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+    }
+
+</script>
+</body>
+</html>
